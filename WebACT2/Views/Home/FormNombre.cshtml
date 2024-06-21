@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormNombre</title>
+</head>
+<body>
+    <div> 
+        <h1>Formulario datos personales</h1>
+        <form action="/Home/RecibirNombre" method="post">
+            <label>Nombre</label>
+            <input type="text" name="nombre" />
+
+            <br /><br />
+
+            <label>Apellido Paterno</label>
+            <input type="text" name="apellP" />
+
+            <br /><br />
+
+            <label>Apellido Materno</label>
+            <input type="text" name="apellM" />
+
+            <br /><br />
+
+            <label>Edad</label>
+            <input type="text" name="edad" />
+
+            <br /><br />
+
+            @Html.ActionLink("Regresar", "Index")
+            <input type="submit" value="Aceptar"/>
+
+            <h2>@TempData["oracion"]</h2>
+
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FormDireccion</title>
+</head>
+<body>
+    <div>
+        <h1>Formulario Dirección</h1>
+        <form action="/Home/RecibirDireccion" method="post">
+            <label>Dirección</label>
+            <input type="text" name="direccion" />
+
+            <br /><br />
+
+            <label>Codigo Postal</label>
+            <input type="text" name="cp" />
+
+            <br /><br />
+
+            <label>Colonia</label>
+            <input type="text" name="colonia" />
+
+            <br /><br />
+
+            <label>Delegación</label>
+            <input type="text" name="delegacion" />
+
+            <br /><br />
+
+            @Html.ActionLink("Regresar", "Index")
+            <input type="submit" value="Aceptar" />
+
+            <h2>@TempData["oracion"]</h2>
+
+
+        </form>
+    </div>
+</body>
+</html>
